@@ -1,7 +1,16 @@
 .info-detail div {
-    border-bottom: 1px dashed #000;
+    border-bottom: 1px dashed #ddd;
     padding: 10px 0;
   }
-  .info-detail div:last-child {
-    border-bottom: none; 
-  }
+.info-detail div:last-child {
+  border-bottom: none; 
+}
+
+.rotate {
+  transition: transform 0.3s ease;
+}
+
+.rotate-down {
+  transform: rotate(180deg);
+}
+  
