@@ -1,0 +1,110 @@
+<div class="container my-5" *ngIf="burger">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card-body">
+                <img [src]="burger.imagePath" class="card-img-top" alt="{{burger.name}}">
+            </div>
+        </div>
+        <div class="col-md-4" >
+            <div class="card-body">
+                <h3 class="card-title">Le {{burger.name}}</h3> <br>
+                <p class="card-text">
+                    <strong>L’unique, l’indémodable Big Mac™ de McDonald’s</strong><br><br> {{burger.description}} <br>
+                </p>
+                <button type="button" class="btn btn-warning order-button" >Commander</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container my-2 d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="ble">
+    <img src="../../assets/img/ble.jpg" class="card-img-top" alt="Ble" style="width: 1250px; height: 550px;">
+  </div>
+</div>
+
+
+
+
+<!-- 
+<p> 
+  <br/> 
+  <button type="button"
+          class="btn btn-success"
+          (click)="collapse.toggle()" 
+          [attr.aria-expanded]="!gfg" 
+    aria-controls="collapseExample"> 
+    Click to collapse 
+  </button> 
+</p> 
+  
+<div #collapse="ngbCollapse"
+     [(ngbCollapse)]="gfg"> 
+  <div class="card"> 
+    <div class="card-body"> 
+      Angular10 ng bootstrap 
+    </div> 
+  </div> 
+</div> -->
+
+
+<div class="about" *ngIf="burger" style="width: 75%; justify-content: center; margin: auto;">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col" style="text-align: center; font-size: 1.5rem; padding: 50px;">A propos du {{burger.name}}</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr (click)="toggleCollapse('ingredients')"
+          [attr.aria-expanded]="!isCollapsed['ingredients']"
+          aria-controls="ingredientsRow">
+        <th scope="row"></th>
+        <td style="font-size: 1.2rem; font-weight: bold; padding: 20px;">Les ingrédients</td>
+      </tr>
+      <tr id="ingredientsRow" [ngbCollapse]="isCollapsed['ingredients']">
+        <td colspan="2" class="info-detail">
+          <div>Info 1</div>
+          <div>Info 2</div>
+          <div>Info 3</div>
+          <div>Info 4</div>
+          <div>Info 5</div>
+        </td>
+      </tr>
+
+      <tr (click)="toggleCollapse('allergenes')"
+          [attr.aria-expanded]="!isCollapsed['allergenes']"
+          aria-controls="allergenesRow">
+        <th scope="row"></th>
+        <td style="font-size: 1.2rem; font-weight: bold; padding: 20px;">Allergènes</td>
+      </tr>
+      <tr id="allergenesRow" [ngbCollapse]="isCollapsed['allergenes']">
+        <td colspan="2" class="info-detail">
+          <div>Info 1</div>
+          <div>Info 2</div>
+          <div>Info 3</div>
+          <div>Info 4</div>
+          <div>Info 5</div>
+        </td>
+      </tr>
+
+      <tr (click)="toggleCollapse('nutriscore')"
+          [attr.aria-expanded]="!isCollapsed['nutriscore']"
+          aria-controls="nutriscoreRow">
+        <th scope="row"></th>
+        <td style="font-size: 1.2rem; font-weight: bold; padding: 20px;">Valeurs nutritionnelles et Nutri-Score</td>
+      </tr>
+      <tr id="nutriscoreRow" [ngbCollapse]="isCollapsed['nutriscore']">
+        <td colspan="2" class="info-detail">
+          <div>Info 1</div>
+          <div>Info 2</div>
+          <div>Info 3</div>
+          <div>Info 4</div>
+          <div>Info 5</div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

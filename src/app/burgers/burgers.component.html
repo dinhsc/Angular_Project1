@@ -1,0 +1,46 @@
+<div class="container-fluid"> <!-- Classe my-5 pour espacer en haut et en bas -->
+    <div class="row justify-content-center">
+        <div class="col-md-4" *ngFor="let burger of burgersList.slice(0,1); let i = index"> <!-- Ajustement de la colonne pour un meilleur alignement -->
+            <div class="card d-flex align-items-center justify-content-between">
+                <div class="card-body d-flex align-items-center justify-content-between">
+                    <div *ngIf="i == 0" class="d-flex flex-column" style="margin-top: 40px; margin-bottom: 40px"> <!-- Ce qui suit dans le bloc <div> est appliqué seulement pour le i == 0 -->
+                        <h5 class="card-title" style="margin-bottom: 25px">{{ burger.name }}</h5>
+                        <button type="button" class="btn btn-warning mb-2" style="width: 200px; height: 50px;">Commander</button>
+                        <button type="button" class="btn btn-light" style="width: 200px; height: 50px;" (click)="showDetails(burger.id!)">Détail</button>
+                    </div>
+                    <img *ngIf="i == 0" [src]="burger.imagePath" alt="{{ burger.name }}" style="width: 40%; height: 75%;">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2" *ngFor="let burger of burgersList.slice(1,2)">
+            <div class="card" (click)="showDetails(burger.id!)">
+                <img [src]="burger.imagePath" class="card-img-top" alt="{{burger.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{burger.name}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Deuxième ligne avec les trois burgers suivants -->
+    <div class="row justify-content-center">
+        <div class="col-md-2" *ngFor="let burger of burgersList.slice(2,5)">
+            <div class="card" (click)="showDetails(burger.id!)">
+                <img [src]="burger.imagePath" class="card-img-top" alt="{{burger.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{burger.name}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Troisième ligne avec les trois burgers suivants -->
+    <div class="row justify-content-center">
+        <div class="col-md-2" *ngFor="let burger of burgersList.slice(5,8)">
+            <div class="card" (click)="showDetails(burger.id!)">
+                <img [src]="burger.imagePath" class="card-img-top" alt="{{burger.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{burger.name}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

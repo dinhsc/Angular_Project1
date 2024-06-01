@@ -1,0 +1,24 @@
+/* .main-page {
+    background: linear-gradient(to bottom, transparent, mistyrose),
+    url("../../assets/img/mcdo.jpg");
+} */
+.container-fluid{
+    background-color: rgb(255, 255, 255);
+}
+
+.card {
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card:hover{
+    background-color:#eee;
+}
+
+.card span{
+    font-size:14px;
+}
+
+

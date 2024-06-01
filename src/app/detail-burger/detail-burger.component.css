@@ -1,0 +1,7 @@
+.info-detail div {
+    border-bottom: 1px dashed #000;
+    padding: 10px 0;
+  }
+  .info-detail div:last-child {
+    border-bottom: none; 
+  }

@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MonappComponent } from './monapp/monapp.component';
+import { LoginComponent } from './login/login.component';
+import { BurgersComponent } from './burgers/burgers.component';
+import { DetailBurgerComponent } from './detail-burger/detail-burger.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'accueil', component: MonappComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'burgers', component: BurgersComponent },
+  { path: 'burgers/:index', component: DetailBurgerComponent },
+  //{ path: 'menus/:index', component: MonappComponent },
+  { path: '', redirectTo: 'accueil', pathMatch: 'full' }
+  
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
