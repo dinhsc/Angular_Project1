@@ -8,6 +8,7 @@ import { MonappComponent } from './monapp/monapp.component';
 import { LoginComponent } from './login/login.component';
 import { BurgersComponent } from './burgers/burgers.component';
 import { DetailBurgerComponent } from './detail-burger/detail-burger.component';
+import { MenusComponent } from './menus/menus.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DetailBurgerComponent } from './detail-burger/detail-burger.component';
     MonappComponent,
     LoginComponent,
     BurgersComponent,
-    DetailBurgerComponent
+    DetailBurgerComponent,
+    MenusComponent
   ],
   imports: [
     BrowserModule,
