@@ -11,7 +11,7 @@
                 <p class="card-text">
                     <strong>L’unique, l’indémodable Big Mac™ de McDonald’s</strong><br><br> {{burger.description}} <br>
                 </p>
-                <button type="button" class="btn btn-warning order-button" >Commander</button>
+                <button type="button" class="btn btn-warning order-button" (click)="orderModal(burger.id!)">Commander</button>
             </div>
         </div>
     </div>
@@ -22,8 +22,26 @@
   </div>
 </div>
 
-
-
+<!-- Modale -->
+<div class="modal fade"  *ngIf="isModalOpen" [ngClass]="{'show': isModalOpen}" tabindex="-1">
+   <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="fa fa-times close-icon" (click)="closeModal()">
+            </button>
+         </div>
+         <div class="modal-body d-flex flex-column align-items-center" *ngIf="burger">
+            <img [src]="burger.imagePath" alt="{{ burger.name }}" style="width: 40%;">
+            <p>{{ burger.name }}</p>
+            <p>{{ burger.price }}</p>
+      </div>
+         <div class="modal-footer d-flex flex-column align-items-center">
+            <button type="button" class="btn btn-warning" style="width: 90%; height: 50px;">Ajouter au panier</button>
+         </div>   
+       </div>
+   </div>
+</div>
+<div class="modal-backdrop fade show" *ngIf="isModalOpen"></div>
 
 <!-- 
 <p> 

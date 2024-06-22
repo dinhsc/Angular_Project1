@@ -21,6 +21,7 @@ export class DetailBurgerComponent {
   ]
   
   burger: Burger | undefined;
+  isModalOpen: boolean = false
 
   constructor(private route: ActivatedRoute) { }
   
@@ -44,6 +45,16 @@ export class DetailBurgerComponent {
   toggleCollapse(section: string) {
     // Inverser l'état du collapse pour la section spécifiée
     this.isCollapsed[section] = !this.isCollapsed[section];
+  }
+
+  orderModal(id : number) {
+    console.log("ORDER", id);
+    this.isModalOpen = true;
+    console.log(this.isModalOpen);
+  }
+
+  closeModal(){
+    this.isModalOpen = false;
   }
 
 }
