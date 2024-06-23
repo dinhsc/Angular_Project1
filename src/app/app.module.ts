@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { BurgersComponent } from './burgers/burgers.component';
 import { DetailBurgerComponent } from './detail-burger/detail-burger.component';
 import { MenusComponent } from './menus/menus.component';
+import { BorderCardDirective } from './border-card.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MenusComponent } from './menus/menus.component';
     LoginComponent,
     BurgersComponent,
     DetailBurgerComponent,
-    MenusComponent
+    MenusComponent,
+    BorderCardDirective
   ],
   imports: [
     BrowserModule,
