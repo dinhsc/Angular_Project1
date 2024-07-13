@@ -10,8 +10,10 @@ import { Burger } from '../class/Burger';
   styleUrl: './burgers.component.css'
 })
 export class BurgersComponent implements OnInit {
-  
+
   burgersList: Burger[] = [];
+  isModalOpen: boolean = false
+
 
   constructor(
     private router: Router,
@@ -27,5 +29,13 @@ export class BurgersComponent implements OnInit {
     if (selectedBurger) {
       this.router.navigate(['/burgers', id]);
     } 
+  }
+
+  orderModal(){
+    this.isModalOpen = true;
+  }
+
+  closeModal(){
+    this.isModalOpen = false;
   }
 }

@@ -5,7 +5,7 @@
                 <div class="card-body d-flex align-items-center justify-content-between">
                     <div *ngIf="i == 0" class="d-flex flex-column" style="margin-top: 40px; margin-bottom: 40px"> <!-- Ce qui suit dans le bloc <div> est appliqué seulement pour le i == 0 -->
                         <h5 class="card-title" style="margin-bottom: 25px">{{ burger.name }}</h5>
-                        <button type="button" class="btn btn-warning mb-2" style="width: 200px; height: 50px;">Commander</button>
+                        <button type="button" class="btn btn-warning mb-2" style="width: 200px; height: 50px;" (click)="orderModal()">Commander</button>
                         <button type="button" class="btn btn-light" style="width: 200px; height: 50px;" (click)="showDetails(burger.id!)">Détail</button>
                     </div>
                     <img *ngIf="i == 0" [src]="burger.imagePath" alt="{{ burger.name }}" style="width: 40%; height: 75%;">
@@ -44,3 +44,25 @@
         </div>
     </div>
 </div>
+
+<!-- Modale -->
+<div class="modal fade" [ngClass]="{'show': isModalOpen}" tabindex="-1"> <!-- Si isModalOpen est true alors on renvoit la classe-->
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+             <button type="button" class="fa fa-times close-icon" (click)="closeModal()">
+             </button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center" >
+             <img src="../../assets/img/bic_mac.jpg"   alt="bic_mac" style="width: 40%;">
+             <p></p>
+             <p></p>
+       </div>
+          <div class="modal-footer d-flex flex-column align-items-center">
+             <button type="button" class="btn btn-warning" style="width: 90%; height: 50px;">Ajouter au panier</button>
+          </div>   
+        </div>
+    </div>
+ </div>
+ <div class="modal-backdrop fade show" *ngIf="isModalOpen"></div>
+ 

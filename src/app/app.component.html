@@ -1,49 +1,105 @@
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light">
+<header style="border-bottom: 1px solid #d4d4d4;">
+  <nav class="navbar navbar-expand-lg" style="margin-left: 10%; margin-right: 10%"> 
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">McDonald's</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="btn text-white btn-floating m-3" style="background-color: #04a304;" href="#" role="button">
+        <i class="fa-thin fa-french-fries"></i>
+      </a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+
+      </button> -->
       <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-lg-0"> <!--Ajout de la marge entre le menu et la barre de recherche avec "me-auto"-->
+        <ul class="navbar-nav mx-auto mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Menu
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown-engagement" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Nos engagements
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="#">Enfant</a></li>
-              <li><a class="dropdown-item" href="#">Burger</a></li>
-              <li><a class="dropdown-item" href="#">Petite faim</a></li>
+            <ul class="dropdown-menu" aria-labelledby="dropdown-engagement">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="d-flex align-items-center">
+                    <img src="https://via.placeholder.com/50" class="me-3" alt="Enfant">
+                    <span>Engagement</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="d-flex align-items-center">
+                    <img src="https://via.placeholder.com/50" class="me-3" alt="Burger">
+                    <span>Burger</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="d-flex align-items-center">
+                    <img src="https://via.placeholder.com/50" class="me-3" alt="Petite faim">
+                    <span>Petite faim</span>
+                  </div>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">À propos</a>
+            <a class="nav-link" href="#">Les Big Questions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Actualités</a>
+            <a class="nav-link" href="#">En famille</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown-produit" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Nos produits
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown-produit">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="d-flex align-items-center">
+                    <img src="https://via.placeholder.com/50" class="me-3" alt="Enfant">
+                    <span>Produit</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="d-flex align-items-center">
+                    <img src="https://via.placeholder.com/50" class="me-3" alt="Burger">
+                    <span>Burger</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="d-flex align-items-center">
+                    <img src="https://via.placeholder.com/50" class="me-3" alt="Petite faim">
+                    <span>Petite faim</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Nous rejoindre</a>
+            <a class="nav-link" href="#">Nos actualités</a>
           </li>
+          
         </ul>
-
-        <!--Mode nuit-->
-        <div class="form-check form-switch me-1">
-            <input class="form-check-input" type="checkbox" id="switchMode">
-            <label class="form-check-label" for="switchMode">
-            </label>
-        </div>
         <form class="d-flex">
-          <button type="button" class="btn btn-light me-2" (click)="signIn()">Mon compte</button> <!--la classe "me-2" pour ajouter de la marge à droite-->
-
-          <button type="button" class="btn btn-warning me-2" (click)="signIn()">Commander</button> <!--la classe "me-2" pour ajouter de la marge à droite-->
+            <a class="btn text-dark" href="#" role="button">
+              <i class="fas fa-search" style="font-size: 1.5em; margin-right: 20px"></i>
+            </a>
+            
+            <a class="btn text-dark" href="#" role="button">
+              <i class="fas fa-map-marker-alt" style="font-size: 1.5em; margin-right: 20px"></i>
+            </a>
+          <button type="button" class="btn btn-light me-2" (click)="signIn()">Mon compte</button>
+          <button type="button" class="btn btn-warning me-2" (click)="signIn()">Commander</button>
         </form>
       </div>
     </div>
   </nav>
 </header>
-<router-outlet></router-outlet>
+
+<router-outlet></router-outlet> <!--Pas besoin de remettre "<app-monapp></app-monapp>" car sinon doublon : On a mis monapp en route par défaut-->
 
 
 <footer class="bg-body-tertiary text-center">
