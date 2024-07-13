@@ -18,7 +18,25 @@ export class MonappComponent {
   show_menus(){
     this.router.navigate(['/menus']);
   }
+
   show_burgers(){
     this.router.navigate(['/burgers']);
   }
+
+  show_petite_faim() {
+    this.router.navigate(['/petite-faim']);
+  }
+
+  show_boissons(){
+    this.router.navigate(['/boissons']);
+  }
+  
+  show_frites_sauces(){
+    this.router.navigate(['/frites-sauces']);
+  }
+
+  show_dessert(){
+    this.router.navigate(['/dessert']);
+  }
+
 }
