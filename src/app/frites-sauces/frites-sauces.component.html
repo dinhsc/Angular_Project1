@@ -1,0 +1,32 @@
+<div class="container-fluid"> <!-- Classe my-5 pour espacer en haut et en bas -->
+    <div class="row justify-content-center" >
+        <div class="col-md-2"  *ngFor="let frites of fritesList.slice(0,3)" >
+            <div class="card" BorderCard> <!--(click)="showDetails(frites.id!)"-->
+                <img [src]="frites.imagePath" class="card-img-top" alt="{{frites.name}}">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{frites.name}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-2" *ngFor="let frites of fritesList.slice(3,6)">
+            <div class="card" BorderCard> <!--(click)="showDetails(frites.id!)"-->
+                <img [src]="frites.imagePath" class="card-img-top" alt="{{frites.name}}">
+                <div class="card-body" >
+                    <h5 class="card-title text-center">{{frites.name}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-2" *ngFor="let frites of fritesList.slice(6,9)">
+            <div class="card" BorderCard> <!--(click)="showDetails(frites.id!)"-->
+                <img [src]="frites.imagePath" class="card-img-top" alt="{{frites.name}}">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{frites.name}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container-fluid"> <!-- Classe my-5 pour espacer en haut et en bas -->
+    <div class="row justify-content-center" >
+        <!-- <div class="col-md-4" *ngFor="let menus of menusList.slice(0,1); let i = index"> 
+            <div class="card d-flex align-items-center justify-content-between">
+                <div class="card-body d-flex align-items-center justify-content-between">
+                    <div *ngIf="i == 0" class="d-flex flex-column" style="margin-top: 40px; margin-bottom: 40px"> 
+                        <h5 class="card-title" style="margin-bottom: 25px">{{ menus.name }}</h5>
+                        <button type="button" class="btn btn-warning mb-2" style="width: 200px; height: 50px;">Commander</button>
+                        <button type="button" class="btn btn-light" style="width: 200px; height: 50px;" (click)="showDetails(menus.id!)">Détail</button>
+                    </div>
+                    <img *ngIf="i == 0" [src]="menus.imagePath" alt="{{ menus.name }}" style="width: 40%; height: 75%;">
+                </div>
+            </div>
+        </div> -->
+        <div class="col-md-2"  *ngFor="let menus of menusList.slice(0,3)" >
+            <div class="card" (click)="showDetails(menus.id!)" BorderCard>
+                <img [src]="menus.imagePath" class="card-img-top" alt="{{menus.name}}">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{menus.name}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Deuxième ligne avec les trois menuss suivants -->
+    <div class="row justify-content-center">
+        <div class="col-md-2" *ngFor="let menus of menusList.slice(3,6)">
+            <div class="card" (click)="showDetails(menus.id!)" BorderCard>
+                <img [src]="menus.imagePath" class="card-img-top" alt="{{menus.name}}">
+                <div class="card-body" >
+                    <h5 class="card-title text-center">{{menus.name}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Troisième ligne avec les trois menuss suivants -->
+    <div class="row justify-content-center">
+        <div class="col-md-2" *ngFor="let menus of menusList.slice(6,9)">
+            <div class="card" (click)="showDetails(menus.id!)" BorderCard>
+                <img [src]="menus.imagePath" class="card-img-top" alt="{{menus.name}}">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{menus.name}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
