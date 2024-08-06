@@ -27,41 +27,41 @@
 </div> -->
 <div class="container-fluid"> <!--classe my-5 pour espacer en haut et en bas-->
   
-    <div class="row justify-content-center">
-      <div class="col-md-2">
-        <div class="card" (click)="show_menus()">
-          <img src="../../assets/img/menus.jpg" class="card-img-top" alt="Burger">
-          <div class="card-body">
-            <h5 class="card-title">Nos Menuddddds</h5>
-            <p class="card-text">Very delicious burgers made with fresh ingredients.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-2">
-        <div class="card" (click)="show_burgers()">
-          <img src="../../assets/img/burger.jpg" class="card-img-top" alt="Kids Meal">
-          <div class="card-body">
-            <h5 class="card-title">Nos Burgers</h5>
-            <p class="card-text">Special meals for the little ones, with toys included!</p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-md-2">
-        <div class="card" (click)="show_petite_faim()" >
-          <img src="../../assets/img/petite_faim.jpeg" class="card-img-top" alt="Fries">
-          <div class="card-body">
-            <h5 class="card-title">Petite faim</h5>
-            <p class="card-text">Special meals for the little ones, with toys included with toys included with toys included</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
   <div class="row justify-content-center">
     <div class="col-md-2">
-      <div class="card" (click)="show_boissons()">
+      <div class="card" (click)="navigateTo('/menus')">
+        <img src="../../assets/img/menus.jpg" class="card-img-top" alt="Burger">
+        <div class="card-body">
+          <h5 class="card-title">Nos Menus</h5>
+          <p class="card-text">Very delicious burgers made with fresh ingredients.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="card" (click)="navigateTo('/burgers')">
+        <img src="../../assets/img/burger.jpg" class="card-img-top" alt="Kids Meal">
+        <div class="card-body">
+          <h5 class="card-title">Nos Burgers</h5>
+          <p class="card-text">Special meals for the little ones, with toys included!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="card" (click)="navigateTo('/petite-faim')">
+        <img src="../../assets/img/petite_faim.jpeg" class="card-img-top" alt="Fries">
+        <div class="card-body">
+          <h5 class="card-title">Petite faim</h5>
+          <p class="card-text">Special meals for the little ones, with toys included with toys included with toys included</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-2">
+      <div class="card" (click)="navigateTo('/boissons')">
         <img src="../../assets/img/boisson.jpg" class="card-img-top" alt="Fries">
         <div class="card-body">
           <h5 class="card-title">Boissons</h5>
@@ -71,7 +71,7 @@
     </div>
 
     <div class="col-md-2">
-      <div class="card" (click)="show_frites_sauces()">
+      <div class="card" (click)="navigateTo('/frites-sauces')">
         <img src="../../assets/img/frite_sauce.jpg" class="card-img-top" alt="Fries">
         <div class="card-body">
           <h5 class="card-title">Frite et sauce</h5>
@@ -81,7 +81,7 @@
     </div>
 
     <div class="col-md-2">
-      <div class="card" (click)="show_dessert()">
+      <div class="card" (click)="navigateTo('/dessert')">
         <img src="../../assets/img/dessert.jpg" class="card-img-top" alt="Fries">
         <div class="card-body">
           <h5 class="card-title">Dessert</h5>
@@ -91,4 +91,5 @@
     </div>
   </div>
 </div>
+
   

@@ -11,6 +11,11 @@ export class MonappComponent {
 
   constructor(private router: Router) { }
 
+  // VERSION FACTORISE
+  navigateTo(route: string) {
+    this.router.navigate([route]);
+  }
+  /********VERSION NAIVE********\
   signIn() {
     this.router.navigate(['/login']);
   }
@@ -38,5 +43,6 @@ export class MonappComponent {
   show_dessert(){
     this.router.navigate(['/dessert']);
   }
+  */
 
 }
