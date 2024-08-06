@@ -22,4 +22,10 @@ export class BoissonsComponent {
     this.boissonsList = this.boissonsServices.getBoissonsList();
   }
   
+  showDetails(id: number){
+    const selectedBoissons = this.boissonsList.find(boissons => boissons.id == id);
+    if (selectedBoissons) {
+      this.router.navigate(['/boissons', id]);
+    } 
+  }
 }

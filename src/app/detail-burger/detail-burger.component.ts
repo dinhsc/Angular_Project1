@@ -10,10 +10,10 @@ import { BURGERS_DATA } from '../burgers/data-burgers-list';
 })
 export class DetailBurgerComponent {
 
-  burgersList = BURGERS_DATA
+  burgersList = BURGERS_DATA;
   
   burger: Burger | undefined;
-  isModalOpen: boolean = false
+  isModalOpen: boolean = false;
 
   constructor(private route: ActivatedRoute) { }
   

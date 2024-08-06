@@ -1,7 +1,7 @@
 <div class="container-fluid"> <!-- Classe my-5 pour espacer en haut et en bas -->
     <div class="row justify-content-center" >
         <div class="col-md-2"  *ngFor="let dessert of dessertList.slice(0,3)" >
-            <div class="card" BorderCard> <!--(click)="showDetails(dessert.id!)"-->
+            <div class="card" BorderCard (click)="showDetails(dessert.id!)"> 
                 <img [src]="dessert.imagePath" class="card-img-top" alt="{{dessert.name}}">
                 <div class="card-body">
                     <h5 class="card-title text-center">{{dessert.name}}</h5>
@@ -11,7 +11,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-2" *ngFor="let dessert of dessertList.slice(3,6)">
-            <div class="card" BorderCard> <!--(click)="showDetails(dessert.id!)"-->
+            <div class="card" BorderCard (click)="showDetails(dessert.id!)"> 
                 <img [src]="dessert.imagePath" class="card-img-top" alt="{{dessert.name}}">
                 <div class="card-body" >
                     <h5 class="card-title text-center">{{dessert.name}}</h5>
@@ -21,7 +21,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-2" *ngFor="let dessert of dessertList.slice(6,9)">
-            <div class="card" BorderCard> <!--(click)="showDetails(dessert.id!)"-->
+            <div class="card" BorderCard (click)="showDetails(dessert.id!)"> 
                 <img [src]="dessert.imagePath" class="card-img-top" alt="{{dessert.name}}">
                 <div class="card-body">
                     <h5 class="card-title text-center">{{dessert.name}}</h5>

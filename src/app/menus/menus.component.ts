@@ -25,7 +25,6 @@ export class MenusComponent {
   showDetails(id: number){
     const selectedMenus = this.menusList.find(menus => menus.id == id);
     if (selectedMenus) {
-      console.log("OK");
       this.router.navigate(['/menus', id]);
     } 
   }

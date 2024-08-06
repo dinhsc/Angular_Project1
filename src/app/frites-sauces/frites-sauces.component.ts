@@ -21,4 +21,10 @@ export class FritesSaucesComponent {
     this.fritesList = this.fritesServices.getFritesList();
   }
 
+  showDetails(id: number){
+    const selectedFrites = this.fritesList.find(frites => frites.id == id);
+    if (selectedFrites) {
+      this.router.navigate(['/frites-sauces', id]);
+    } 
+  }
 }

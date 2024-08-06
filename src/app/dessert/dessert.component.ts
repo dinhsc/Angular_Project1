@@ -20,4 +20,11 @@ export class DessertComponent {
   ngOnInit() {
     this.dessertList = this.dessertService.getDessertList();
   }
+
+  showDetails(id: number){
+    const selectedDessert = this.dessertList.find(dessert => dessert.id == id);
+    if (selectedDessert) {
+      this.router.navigate(['/dessert', id]);
+    } 
+  }
 }

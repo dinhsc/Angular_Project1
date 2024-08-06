@@ -14,6 +14,11 @@ import { PetiteFaimComponent } from './petite-faim/petite-faim.component';
 import { BoissonsComponent } from './boissons/boissons.component';
 import { FritesSaucesComponent } from './frites-sauces/frites-sauces.component';
 import { DessertComponent } from './dessert/dessert.component';
+import { DetailMenusComponent } from './detail-menus/detail-menus.component';
+import { DetailFaimComponent } from './detail-faim/detail-faim.component';
+import { DetailBoissonsComponent } from './detail-boissons/detail-boissons.component';
+import { DetailFritesComponent } from './detail-frites/detail-frites.component';
+import { DetailDessertComponent } from './detail-dessert/detail-dessert.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { DessertComponent } from './dessert/dessert.component';
     PetiteFaimComponent,
     BoissonsComponent,
     FritesSaucesComponent,
-    DessertComponent
+    DessertComponent,
+    DetailMenusComponent,
+    DetailFaimComponent,
+    DetailBoissonsComponent,
+    DetailFritesComponent,
+    DetailDessertComponent
   ],
   imports: [
     BrowserModule,

@@ -21,5 +21,12 @@ export class PetiteFaimComponent {
   ngOnInit() {
     this.petiteList = this.petiteService.getPetiteFaimList();
   }
+
+  showDetails(id: number){
+    const selectedPetiteFaim = this.petiteList.find(petite => petite.id == id);
+    if (selectedPetiteFaim) {
+      this.router.navigate(['/petite-faim', id]);
+    } 
+  }
   
 }
